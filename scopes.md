@@ -4,13 +4,15 @@
 
 > A scope essentially defines which variables you can use/access. A scope is divided into a **global**, and **local scopes**.
 
+> A closure is an inner function, which has access to parent/outer function scope.
+
 ### Scopes
 
 Variables exposed in the global scope, will be accessible from within the global scope, and all the other underlying local scopes. However, a variable inside a local scope, will not be directly accessible from another local scope or from the global scope. When you are declaring a variable outside a function, then you are declaring a global variable.
 
 #### Nested scopes
 
-In Javascript, the child scope has access to it's parents variables. But not the other way around. This concept is called **lexical scoping**.
+In Javascript, the child scope has access to it's parents variables. But not the other way around. This concept is named **lexical scoping**.
 
 {% code-tabs %}
 {% code-tabs-item title="Example 1" %}
@@ -63,7 +65,78 @@ function someFunction() {
 {% endcode-tabs-item %}
 {% endcode-tabs %}
 
+#### Scope chain
+
+A scope chain, is a chain where the code needs to look for referenced variables. It starts searching in the local scope, and goes one scope up at a time if not found at that scope, until it reaches the global scope. It picks the first or "closest" assignment of that function or variable.
+
+{% code-tabs %}
+{% code-tabs-item title="Example 3" %}
+```javascript
+function someFunction() {
+  let someString = 'Anduin Wrynn'
+
+  function innerFunc() {
+    return someString
+  }
+
+  return (() => {
+    let someString = 'Something else'
+
+    return innerFunc()
+  })()
+}
+
+const res = someFunction()
+console.log(res) // Output: Anduin Wrynn
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+In the example above, `someString` is defined twice. The declaration inside the anonymous function does not redeclare `someString` inside the `someFunction` scope. Since the redeclaration is in another function scope, it will not apply to `innerFunc` since it's scope chain is: `innerFunc scope` → `someFunction scope` → `global scope`. 
+
+{% code-tabs %}
+{% code-tabs-item title="Example 4" %}
+```javascript
+function someFunction() {
+
+  let someString = 'Anduin Wrynn'
+
+  function innerFunc() {
+    return someString
+  }
+
+  return (() => {
+    let someString = 'Something else'
+    return someString
+  })()
+}
+
+const res = someFunction()
+console.log(res) // Output: Something else
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+The scope chain for when searching for variable `someString` inside the anonymous function is: `anonymous func scope` → `someFunction scope` → `global scope`. 
+
 ### Closures
+
+A inner function has access to parent's scope, including function parameters. 
+
+{% code-tabs %}
+{% code-tabs-item title="Example 5" %}
+```javascript
+function someFunction() {
+    const STATIC_STRING = 'Sylvanas Windrunner'
+    
+    return () => {
+        // Has access to STATIC_STRING, inside this nested function.
+        console.log(STATIC_STRING)
+    }
+}
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
 
 
 
