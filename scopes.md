@@ -4,7 +4,7 @@
 
 > A scope essentially defines which variables you can use/access. A scope is divided into a **global**, and **local scopes**.
 
-> A closure is an inner function, which has access to parent/outer function scope.
+> A closure is an inner function, which has access to the parent/outer function scope.
 
 ### Scopes
 
