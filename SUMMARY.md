@@ -2,7 +2,7 @@
 
 * [Introduction](README.md)
 * [Hoisting](hoisting.md)
-* Scopes and closures
+* [Scopes and closures](scopes.md)
 * References
 * Prototype and inheritance
 * Higher order functions
