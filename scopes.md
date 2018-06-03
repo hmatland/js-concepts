@@ -119,12 +119,45 @@ console.log(res) // Output: Something else
 
 The scope chain for when searching for variable `someString` inside the anonymous function is: `anonymous func scope` → `someFunction scope` → `global scope`. 
 
+#### Usage of global scope
+
+The use of the global scope should be minimal. In the case of browsers, all of the code is sharing the same _namespace_. It means that, if you have a global variable for example in `index.js`,  then all other Javascript files will have access to the global variable. This can lead to collisions and more reserved variable names. But, due to the ES6 Modules, you can isolate each "module" or file, to have it own scope, and then instead export specific functions and variable from each module. If ES6 is not supported, you can use a **IIFE** – _Immediately invoked function expression_ _\(pronounced "iffy"\)_, which wraps the code inside a function scope, and then make use of global variables, outside that function scope. 
+
+{% code-tabs %}
+{% code-tabs-item title="Example 5" %}
+```javascript
+(function() {
+    // Code    
+})();
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+_It is recommended to use a semi-colon after an IIFE,_ due to that all included Javascript files are appended to each other in the browser. This side-effect of not using a semi-colon is that the IIFE is suddenly used as an argument for a function call, in the file before:
+
+{% code-tabs %}
+{% code-tabs-item title="Example 5 – No semicolon" %}
+```javascript
+// index.js
+functionExpression = () => {
+    console.log('I am not supposed to run.')
+}
+// someModule.js
+(function() {
+    // Code
+})()
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+This is a side-effect by **ASI** – _Automation semi-colon inserter_ in Javascript. After being processed by an uglifier/code-compressor, it might parse the IIFE as an function call to `functionExpression`. 
+
 ### Closures
 
 A inner function has access to parent's scope, including function parameters. 
 
 {% code-tabs %}
-{% code-tabs-item title="Example 5" %}
+{% code-tabs-item title="Example 6" %}
 ```javascript
 function someFunction() {
     const STATIC_STRING = 'Sylvanas Windrunner'
