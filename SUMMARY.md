@@ -4,7 +4,7 @@
 * [Hoisting](hoisting.md)
 * [Scopes and closures](scopes.md)
 * References
-* Prototype and inheritance
+* [Prototype and inheritance](prototype-and-inheritance.md)
 * Higher order functions
 * Asynchronous code
   * Promises
