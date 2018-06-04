@@ -9,8 +9,9 @@
 * Asynchronous code
   * Promises
   * async / await – keywords
-* this – keyword
+* [this – keyword](untitled.md)
 * new – keyword
 * call, apply and bind
 * [Extra resources](extra-resources.md)
+* Strict mode
 
