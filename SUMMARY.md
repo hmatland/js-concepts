@@ -3,11 +3,11 @@
 * [Introduction](README.md)
 * [Hoisting](hoisting.md)
 * [Scopes and closures](scopes.md)
-* References
+* [References](references.md)
 * [Prototype and inheritance](prototype-and-inheritance.md)
 * Higher order functions
 * Asynchronous code
-  * Promises
+  * [Promises](asynchronous-code/promises.md)
   * async / await – keywords
 * [this – keyword](untitled.md)
 * new – keyword
