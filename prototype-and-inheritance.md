@@ -38,6 +38,36 @@ prototypeObj.g() // Outputs: 5
 
 ### Prototype chains
 
+When an object is created from another object, it will _inherit_ it's prototype.
+
+{% code-tabs %}
+{% code-tabs-item title="Example 2" %}
+```javascript
+let x = {
+  a: 1
+}
+
+let y = Object.create(x)
+y.b = 2
+
+let z = Object.create(y)
+z.c = 3
+
+// z object
+console.log(z) // Output: {c: 3}
+
+// y prototype
+console.log(z.__proto__) // Output: {b: 2}
+
+// z prototype
+console.log(z.__proto__.__proto__) // Output: {a: 1}
+
+// Object prototype
+console.log(z.__proto__.__proto__.__proto__) // Object methods
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
 ### The 'constructor' property
 
 ### When to use prototypes
