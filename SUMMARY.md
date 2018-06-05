@@ -13,7 +13,7 @@
 * [this – keyword](untitled.md)
 * [new – keyword](new-keyword.md)
 * [call, apply and bind](call-apply-and-bind.md)
-* [Extra resources](extra-resources.md)
 * [Strict mode](strict-mode.md)
 * [Iterators](iterators.md)
+* [Extra resources](extra-resources.md)
 
