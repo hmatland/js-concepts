@@ -5,13 +5,15 @@
 * [Scopes and closures](scopes.md)
 * [References](references.md)
 * [Prototype and inheritance](prototype-and-inheritance.md)
-* Higher order functions
-* Asynchronous code
+* [Higher-order functions](higher-order-functions.md)
+* [Asynchronous code](asynchronous-code/README.md)
   * [Promises](asynchronous-code/promises.md)
-  * async / await – keywords
+  * [async / await – keywords](asynchronous-code/async-await-keywords.md)
+* [Generators](generators.md)
 * [this – keyword](untitled.md)
-* new – keyword
-* call, apply and bind
+* [new – keyword](new-keyword.md)
+* [call, apply and bind](call-apply-and-bind.md)
 * [Extra resources](extra-resources.md)
-* Strict mode
+* [Strict mode](strict-mode.md)
+* [Iterators](iterators.md)
 
