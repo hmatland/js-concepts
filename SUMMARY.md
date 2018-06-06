@@ -10,11 +10,11 @@
   * [Promises](asynchronous-code/promises.md)
   * [async / await – keywords](asynchronous-code/async-await-keywords.md)
 * [Generators](generators.md)
+* [Iterators](iterators.md)
 * [this – keyword](untitled.md)
 * [new – keyword](new-keyword.md)
 * [call, apply and bind](call-apply-and-bind.md)
 * [Strict mode](strict-mode.md)
-* [Iterators](iterators.md)
 * [Destructuring and spread operator](destructuring-and-spread-operator.md)
 * [Extra resources](extra-resources.md)
 

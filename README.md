@@ -10,6 +10,20 @@ It will cover more intermediate features and behaviours.
 
 * Hoisting
 * Scoping
+* Scopes / closures
+* Object references
+* Prototyping and prototype inheritance
+* Higher-order functions
+* Promises
+* `async/await`
+* Generators
+* Iterators
+* `this`
+* `new`
+* `.call .apply .bind`  methods
+* `'strict mode'`
+* Destructuring objects and array spreading
+* _+ extra resources_
 
 
 
