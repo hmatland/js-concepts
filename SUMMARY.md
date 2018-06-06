@@ -15,5 +15,6 @@
 * [call, apply and bind](call-apply-and-bind.md)
 * [Strict mode](strict-mode.md)
 * [Iterators](iterators.md)
+* [Destructuring and spread operator](destructuring-and-spread-operator.md)
 * [Extra resources](extra-resources.md)
 
