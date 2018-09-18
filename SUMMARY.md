@@ -17,4 +17,5 @@
 * [Strict mode](strict-mode.md)
 * [Destructuring and spread operator](destructuring-and-spread-operator.md)
 * [Extra resources](extra-resources.md)
+* [How to contribute](how-to-contribute.md)
 
