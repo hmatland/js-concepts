@@ -12,7 +12,7 @@ A prototype can somewhat remind of classes in other languages; inheritance, shar
 
 ### Inheriting a prototype
 
-When you are prototyping, you can access the object itself by the `this` keyword \([read more about it here](untitled.md)\). 
+When you are prototyping, you can access the object itself by the `this` keyword \([read more about it here](this-keyword.md)\). 
 
 {% code-tabs %}
 {% code-tabs-item title="Example 1" %}
