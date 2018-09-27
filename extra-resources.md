@@ -8,8 +8,8 @@ description: 'Here are links for other well-written tutorials, documentation or 
 
 ### Free
 
-* [Eloquent JavaScript](https://eloquentjavascript.net/): Perhaps the best book out there for JS, a must to read.
-* [You Don't Know JS](https://github.com/getify/You-Dont-Know-JS): Goes in-depth about several JS concepts.
+* [Eloquent JavaScript](https://eloquentjavascript.net/): Perhaps the best book out there for JS, a must read.
+* [You Don't Know JS](https://github.com/getify/You-Dont-Know-JS): Goes in-depth about several JS topics.
 
 ### Paid
 
